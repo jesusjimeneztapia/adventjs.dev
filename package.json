@@ -1,0 +1,22 @@
+{
+  "name": "adventjs.dev",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Soluciones a los retos de programación del AdventJS",
+  "workspaces": [
+    "challenges"
+  ],
+  "scripts": {},
+  "keywords": [
+    "adventjs",
+    "midudev",
+    "retos",
+    "javascript"
+  ],
+  "author": {
+    "email": "jesusjimeneztapia456@gmail.com",
+    "name": "Jesús Alberto Jimenez Tapia",
+    "url": "https://github.com/jesusjimeneztapia"
+  },
+  "license": "MIT"
+}
