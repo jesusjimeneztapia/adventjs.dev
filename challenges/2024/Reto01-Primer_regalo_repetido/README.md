@@ -53,7 +53,7 @@ function prepareGifts(gifts: number[]): number[] {
 }
 ```
 
-- **[Pruebas](/challenges/2024/Reto01-Primer_regalo_repetido/js/solution.test.js)**
+- **[Pruebas](/challenges/2024/Reto01-Primer_regalo_repetido/ts/solution.spec.ts)**
 
 ```bash
 npm run test:ts:01

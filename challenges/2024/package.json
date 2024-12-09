@@ -7,7 +7,9 @@
   "scripts": {
     "test": "vitest run",
     "test:js:01": "vitest run Reto01-Primer_regalo_repetido/js",
-    "test:ts:01": "vitest run Reto01-Primer_regalo_repetido/ts"
+    "test:ts:01": "vitest run Reto01-Primer_regalo_repetido/ts",
+    "test:js:02": "vitest run Reto02-Enmarcando_nombres/js",
+    "test:ts:02": "vitest run Reto02-Enmarcando_nombres/ts"
   },
   "keywords": [
     "adventjs",
