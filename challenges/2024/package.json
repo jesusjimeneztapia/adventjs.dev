@@ -3,13 +3,19 @@
   "version": "0.0.1",
   "private": true,
   "description": "Soluciones a los retos de programación del AdventJS 2024",
-  "scripts": {},
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:js:01": "vitest run Reto01-Primer_regalo_repetido/js",
+    "test:ts:01": "vitest run Reto01-Primer_regalo_repetido/ts"
+  },
   "keywords": [
     "adventjs",
     "2024",
     "midudev",
     "retos",
-    "javascript"
+    "javascript",
+    "typescript"
   ],
   "author": {
     "email": "jesusjimeneztapia456@gmail.com",

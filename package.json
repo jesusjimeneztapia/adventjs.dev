@@ -4,9 +4,12 @@
   "private": true,
   "description": "Soluciones a los retos de programación del AdventJS",
   "workspaces": [
-    "challenges"
+    "challenges/*"
   ],
-  "scripts": {},
+  "scripts": {
+    "test": "vitest run",
+    "test:2024": "npm run -w challenges/2024 test"
+  },
   "keywords": [
     "adventjs",
     "midudev",
@@ -18,5 +21,11 @@
     "name": "Jesús Alberto Jimenez Tapia",
     "url": "https://github.com/jesusjimeneztapia"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "ts-node": "10.9.2",
+    "tsx": "4.19.2",
+    "typescript": "5.7.2",
+    "vitest": "2.1.8"
+  }
 }
