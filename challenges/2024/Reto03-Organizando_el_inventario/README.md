@@ -55,3 +55,57 @@ organizeInventory(inventory2)
 //   }
 // }
 ```
+
+## Solución
+
+### 1. JavaScript
+
+**Puntuación**: **★ ★ ★ ★ ★**
+
+- **[Código](/challenges/2024/Reto03-Organizando_el_inventario/js/solution.js 'Código de la solución en JavaScript')**
+
+```js
+function organizeInventory(inventory) {
+  return inventory.reduce((acc, { category, name, quantity }) => {
+    const foundCategory = acc[category]
+    const foundQuantity = foundCategory?.[name] ?? 0
+    return { ...acc, [category]: { ...foundCategory, [name]: foundQuantity + quantity } }
+  }, {})
+}
+```
+
+- **[Pruebas](/challenges/2024/Reto03-Organizando_el_inventario/js/solution.test.js 'Pruebas de solución en JavaScript')**
+
+```bash
+npm run test:js:03
+```
+
+![Pruebas de la solución en JavaScript ejecutadas en consola](/challenges/2024/Reto03-Organizando_el_inventario/assets/images/test-js.png 'Pruebas de la solución en JavaScript ejecutadas')
+
+### 2. TypeScript
+
+**Puntuación**: **★ ★ ★ ★ ☆**
+
+- **[Código](/challenges/2024/Reto03-Organizando_el_inventario/ts/solution.ts)**
+
+```ts
+type Inventory = Array<{ name: string; quantity: number; category: string }>
+
+function organizeInventory(inventory: Inventory): object {
+  let result = {}
+  for (const { category, name, quantity } of inventory) {
+    const foundCategory = result[category]
+    const foundQuantity = foundCategory?.[name] ?? 0
+    result = { ...result, [category]: { ...foundCategory, [name]: foundQuantity + quantity } }
+  }
+  return result
+}
+```
+
+- **[Pruebas](/challenges/2024/Reto03-Organizando_el_inventario/ts/solution.spec.ts)**
+
+```bash
+npm run test:ts:03
+```
+
+![Pruebas de la solución en TypeScript ejecutadas en consola](/challenges/2024/Reto03-Organizando_el_inventario/assets/images/test-ts.png 'Pruebas de la solución en TypeScript ejecutadas')
