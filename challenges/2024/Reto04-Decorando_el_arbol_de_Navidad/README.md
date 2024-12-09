@@ -50,3 +50,63 @@ _____#_____
 ```
 
 Asegúrate de utilizar saltos de línea \n al final de cada línea, **excepto en la última.**
+
+## Solución
+
+### 1. JavaScript
+
+**Puntuación**: **★ ★ ★ ★ ★**
+
+- **[Código](/challenges/2024/Reto04-Decorando_el_arbol_de_Navidad/js/solution.js 'Código de la solución en JavaScript')**
+
+```js
+function createXmasTree(height, ornament) {
+  const size = height * 2 - 1
+  let result = ''
+  let i = 1
+  for (i; i <= height; ++i) {
+    const large = i + (i - 1)
+    const side = (size - large) / 2
+    result += `${'_'.repeat(side)}${ornament.repeat(large)}${'_'.repeat(side)}\n`
+  }
+  const trunk = `${'_'.repeat((size - 1) / 2)}#${'_'.repeat((size - 1) / 2)}`
+  return `${result}${[trunk, trunk].join('\n')}`
+}
+```
+
+- **[Pruebas](/challenges/2024/Reto04-Decorando_el_arbol_de_Navidad/js/solution.test.js 'Pruebas de solución en JavaScript')**
+
+```bash
+npm run test:js:04
+```
+
+![Pruebas de la solución en JavaScript ejecutadas en consola](/challenges/2024/Reto04-Decorando_el_arbol_de_Navidad/assets/images/test-js.png 'Pruebas de la solución en JavaScript ejecutadas')
+
+### 2. TypeScript
+
+**Puntuación**: **★ ★ ★ ★ ★**
+
+- **[Código](/challenges/2024/Reto04-Decorando_el_arbol_de_Navidad/ts/solution.ts)**
+
+```ts
+function createXmasTree(height: number, ornament: string): string {
+  const size = height * 2 - 1
+  let result = ''
+  let i = 1
+  for (i; i <= height; ++i) {
+    const large = i + (i - 1)
+    const side = (size - large) / 2
+    result += `${'_'.repeat(side)}${ornament.repeat(large)}${'_'.repeat(side)}\n`
+  }
+  const trunk = `${'_'.repeat((size - 1) / 2)}#${'_'.repeat((size - 1) / 2)}`
+  return `${result}${[trunk, trunk].join('\n')}`
+}
+```
+
+- **[Pruebas](/challenges/2024/Reto04-Decorando_el_arbol_de_Navidad/ts/solution.spec.ts)**
+
+```bash
+npm run test:ts:04
+```
+
+![Pruebas de la solución en TypeScript ejecutadas en consola](/challenges/2024/Reto04-Decorando_el_arbol_de_Navidad/assets/images/test-ts.png 'Pruebas de la solución en TypeScript ejecutadas')
